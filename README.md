@@ -204,3 +204,41 @@ string.substring(indexStart, indexEnd) is used to return a portion of the string
 indexStart: the position of the first character you'd like to include.
 indexEnd: the position of the first character you'd like to ignore.
 the indexEnd argument is optional which means you can leave it out.
+
+
+
+////////////////////  Plus operator 
+Last updated January 2022
+Good job on finishing your first real-world challenge. We will revisit this text ellipsis project several times in the following chapters so that we improve it.
+
+In JavaScript, the plus operator (+) will behave differently based on the types of values you use it with.
+
+You've already seen that 1 + 3 will return the number 4.
+
+However, you could also use the + to concatenate 2 strings together, which means merging them together into 1 string.
+
+Here's an example:
+
+
+"Hello" + "World" //"HelloWorld"
+will return one string: "HelloWorld". This would be useful if you'd like to concatenate 2 or more strings together. For example:
+
+
+let prefix = "Mrs.";
+let name = "Sam";
+let string = prefix + " " + name; // "Mrs. Sam"
+It's also possible to do the above with string interpolation, which is covered in the next lesson.
+
++= operator
+Say you have the following code:
+
+
+let name = "Sam";
+name = name + " Blue";
+console.log(name); // "Sam Blue"
+You can rewrite the name = name + in a shorter way using the += operator:
+
+
+let name = "Sam";
+name += " Blue";
+console.log(name); // "Sam Blue"
