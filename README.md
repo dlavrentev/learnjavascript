@@ -309,3 +309,58 @@ The + operator is used to concatenate 2 strings
 A template string is a string created with the backtick character: `
 Template strings can span multiple lines
 Template strings support interpolation with the ${variableName} syntax
+
+
+/////////////////////// 3.Numbers /////////////////////////////////
+Last updated August 2022
+1
+2
+-5
+3.5
+2000
+2021
+-23.51
+All of these are examples of Numbers in JavaScript. It doesn't matter if it's negative or positive, or if it has decimals (values after the .) or not. We call them numbers.
+
+Numeric separator (_)
+You can represent larger numbers clearer, if you wish, with using the numeric separator (_). For example:
+
+let nb = 1_000; // equivalent to 1000
+It makes larger numbers easier to read. For example:
+
+let nb = 1_000_000; // 1000000 (1 million)
+The _ is taken out by JavaScript from the number. So, 10_00 is equivalent to 1000.
+
+Converting from number to string
+Though rarely used, you can convert a number to a string by calling the .toString() method.
+Let's take an example where we have a variable called answer with a value 42;
+
+
+let answer = 42;
+answer.toString(); //"42"
+MDN logoNumber.toString() on MDN
+
+
+In the next lesson, we'll see how to do the opposite. Converting a string into a number.
+
+Documentation on the Web
+If you take a look at online documentation, you will often see String.prototype.toString(). Why is there a prototype? This is covered in-depth later in this course. For now, every time you see String.prototype.something(), it means there is a method something() that you can call on a String.
+
+Mozilla Developer Network is the most authoritative website for JavaScript documentation. If you're getting started with JavaScript, however, you might find it a bit hard to grasp.
+
+Therefore in this course, we are aiming to provide you with short and easy-to-consume explanations, so you don't feel overwhelmed when you are just beginning your learning journey.
+
+When you are comfortable with what Learn JavaScript says about a topic and want to dig deeper and find out more, look for the MDN logo MDN logo and click the link that follows it to access much more in-depth information.
+
+NaN
+You may sometimes encounter NaN which stands for Not a Number. For example, if you try to multiply a number by a string (which you should not do):
+
+
+// ❌
+"abc" * 4; // NaN
+NaN is often a sign that something is wrong with your code, most often you forgot to convert a string to a number. One of the most common cases is when an object property evaluates to undefined because of a typo and then it's used as if it was a valid number (more on that in later chapters as we learn about objects and object properties).
+
+Recap
+Convert from a number to string: value.toString()
+NaN stands for Not a Number
+NaN is often a sign of a bug.
