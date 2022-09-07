@@ -364,3 +364,74 @@ Recap
 Convert from a number to string: value.toString()
 NaN stands for Not a Number
 NaN is often a sign of a bug.
+
+
+//////////////////    Convert string to number 
+Last updated March 2022
+In some scenarios (explained below), you'd like to convert from a string to a number. For that, you'd have to use the Number.parseInt() method.
+
+Here's an example:
+
+
+let str = "42";
+Number.parseInt(str, 10); //42
+There's a lot going on here, so let's break it down step by step.
+
+The function name is called Number.parseInt(). Yes, including the Number. bit. This is because there's a global object called Number which contains a method called parseInt().
+
+This Number.parseInt() method expects 2 parameters:
+
+
+Number.parseInt(string, radix);
+The first parameter is the string that you'd like to convert into a number. The second argument is the radix that will be used in the conversion.
+
+The radix is the base of the numerical system that you'd like to use. For most use cases the radix you'd like to use is 10 which represents the way we count numbers in our everyday lives. This system is called the decimal system (because we have 10 fingers, so we use the digits from 0 to 9).
+
+Another example of radix is 2 which represents binary (a numerical system used by computers). If you'd like to dig deeper into this concept, check out this simplified Wikipedia page about Mathematical bases.
+
+As a quick summary, the radix will most often be 10. If you're not sure what radix to choose, then it's most likely 10.
+
+Can I skip the radix?
+Even though the radix is an optional parameter, you should not skip it. That's because it does not always default to 10.
+So make sure to always pass the radix as the 2nd parameter.
+
+Number.parseInt(string, radix) does not always default to a radix of 10.
+
+If you do try Number.parseInt() without a radix of 10, it will work. However, there are some edge cases (numbers starting with 0x) that would break. Thus, to be safe, it's always recommended to pass the radix.
+
+Make sure to always specify the radix to avoid unpleasant surprises.
+
+MDN logoNumber.parseInt() on MDN
+
+
+Legacy notes
+JavaScript is an evolving language that is over 25 years old. It keeps changing and evolving. Legacy notes will explain some confusing behavior or old functions that you may have encountered a while ago.
+
+If you are learning JavaScript for the first time, then you don't need to spend a lot of time in those legacy notes.
+
+Number.parseInt() and parseInt() are exactly the same thing. Prefer Number.parseInt() over parseInt().
+
+A while ago, parseInt(string, radix) was the only way to convert numbers, however, a while later, this function has been cloned under the Number object and became Number.parseInt(string, radix) in an effort to group similar functions together under their relevant object.
+
+They both work exactly the same. We do recommend that you stick with the modern approach which is Number.parseInt().
+
+Use cases for converting to a number
+There are several reasons why you'd like to convert a string to a number, but the most common one is when the number is entered by the user in a text box or the number is being read from the DOM (which is explained later on).
+
+As you will see in the next challenge, these values will always be a string (even if the user writes a number). Thus, it is your job to convert it to a number.
+
+If you forget to convert a string to a number, you will see that the intended addition is behaving like concatenation:
+
+let a = 10;
+let b = "20"; // we forgot to convert it to a number
+a + b; // "1020" (concatenation instead of sum)
+The Number.parseInt() method will try to convert the string it receives into a number. As you can see below, it most often works when the string starts with a number and ends with non-numeric values:
+
+
+Number.parseInt("123abc", 10); // 123
+Number.parseInt("5 meters", 10); // 5
+Recap
+Convert from string to number Number.parseInt(value, 10).
+Number.parseInt() is the name of the function you're calling.
+10 is the radix which you should specify.
+Make sure to always specify the radix to avoid unpleasant surprises.
