@@ -82,3 +82,74 @@ You can create strings with " or '
 .toLowerCase() is a function that converts the string to lower case
 parentheses () on function calls are required. .length is a property that is already pre-computed; therefore, it does not need parentheses.
 console.log(...) is used for debugging and is NOT a replacement for return.
+
+
+
+///////////////// Character access 
+Last updated August 2022
+You can access a specific character in a string by using the square brackets syntax [].
+
+You have to provide the index of the character that you'd like to access, starting from 0.
+
+Let's take an example where the variable language has the value: "JavaScript". Here's how you access the 1st character, the 2nd, and the 3rd:
+
+
+const language = "JavaScript";
+
+language[0]; //first character
+language[1]; //second character
+language[2]; //third character
+If you'd like to debug your code and see the result of language[1] in the console, you have to console log it as follows:
+
+
+console.log(language[1]);
+Combining it with length
+You can also combine the character access with the .length property. So using the same language variable, here's how you get the second to last character from it:
+
+
+const language = "JavaScript";
+
+language[ language.length - 2 ]; // "p" because it's the second to last character from "JavaScript"
+Note that language[ language.length ] will be undefined because character access starts at 0.
+So for a string of 9 characters, 8 is the position of the last character.
+
+The .at(index) method
+Since 2022, JavaScript now has a .at() method that reads the character at a certain index, which can also be negative.
+
+Let's take a look at a few examples:
+
+const language = "JavaScript";
+language.at(0); // "J"
+language.at(1); // "a"
+language.at(-1); // "t"
+language.at(-2); // "p"
+The primary use case for the .at() method is negative indices, making it easier than relying on the .length property. However, you can use whichever approach you prefer.
+
+When a negative index is specified, you start counting from the end. -1 is the last character, -2 is the one before it, etc.
+
+You can continue using the square bracket syntax for all other use cases, knowing that language[-1] returns undefined. So, whenever you want to use a negative index, you should use the .at() method.
+
+JSDoc
+By now, you probably noticed that most of the challenges start with some comments that look like this:
+
+/**
+ * @param {string} name
+ */
+These comments are used to improve your coding experience. They let the code editor know what methods to suggest to you while you're typing. So you can ignore these comments. You will never have to change them or add them, and they don't affect the tests.
+
+What is the "Sample usage"?
+You may have also noticed that every challenge has some sample usage code at the end. For example, for the function getCharCount, we had:
+
+// Sample usage - do not modify
+console.log(getCharCount("Sam")); // 3
+console.log(getCharCount("Alex 123")); // 8
+console.log(getCharCount("Charley is here")); // 15
+The goal of the sample usage is to show you the various ways we expect to call the function. Sometimes, we show you the expected output next to it in a comment.
+
+Note that in the tests, we end up calling your function with more examples not visible in the sample code. The goal of this is to make sure that you've provided a correct answer that works in several scenarios, not just one or two scenarios.
+
+Recap
+Square brackets [index] are used to access a specific index from a string.
+The index starts at 0. So the first character is index 0.
+You can combine it with the length of a string to get another character in another position.
+The .at() method allows you to read a character at an index (which can also be negative).
