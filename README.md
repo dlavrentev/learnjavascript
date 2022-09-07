@@ -242,3 +242,42 @@ You can rewrite the name = name + in a shorter way using the += operator:
 let name = "Sam";
 name += " Blue";
 console.log(name); // "Sam Blue"
+
+
+///////////////////////////////    Template strings 
+Last updated May 2021
+You already know that you can create strings with double quotes or single quotes, but as you already know, these strings do not support interpolation.
+
+Template strings, however, support interpolation and other nifty features.
+
+Your first template string
+
+`This is a template string`
+The only difference is that template strings start and end with a backtick ` character.
+
+The backtick is above the tab key on International keyboard layouts. For other keyboards, check out these threads for Windows/Linux & mac and look for your keyboard layout.
+
+Multiline strings
+Unlike single quote and double quote strings, template strings can span multiple lines. Here's an example:
+
+
+let text = `This is a multiline
+string that
+just works!`
+Whereas this would have not been possible with a normal string (single quotes or double quotes).
+
+Interpolation
+Template strings support interpolation! This means you could write a variable in your string, and get its value. The syntax is straightforward, you wrap your variable name with a dollar sign and curly braces. Let's take an example where we have a variable language with a value of JavaScript.
+
+
+let language = "JavaScript";
+`I am learning ${language}`; //"I am learning JavaScript";
+Remember that string interpolation only works with backticks. If you ever try it and it doesn't work, double-check that you're using backticks rather than single or double-quotes.
+
+Additional examples
+How to write a multiline string
+How to interpolate in JavaScript
+Recap
+A template string is a string created with the backtick character: `
+Template strings can span multiple lines
+Template strings support interpolation with the ${variableName} syntax
