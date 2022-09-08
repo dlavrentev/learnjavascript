@@ -435,3 +435,37 @@ Convert from string to number Number.parseInt(value, 10).
 Number.parseInt() is the name of the function you're calling.
 10 is the radix which you should specify.
 Make sure to always specify the radix to avoid unpleasant surprises.
+
+
+////////////// Operations 
+Last updated January 2022
+As you might expect, numbers can be multiplied and divided. We've already done an example of multiplication at the beginning of the course, using the * operator.
+For division, you need to use the / operator.
+
+Division remainder
+You can also use the remainder operator % which returns the division remainder. Here's an example:
+
+
+8 % 2; // Division remainder is 0
+7 % 2; // Division remainder is 1 
+Here's how the division remainder of 8 % 2 is calculated:
+
+8 / 2 = 4
+4 / 2 = 2
+=> division remainder is 0 because 8 = 4 * 2 + 0
+
+Where as for 7 % 2:
+
+7 / 2 = 3 (rounded)
+=> division remainder is 1 because 7 = 3 * 2 + 1
+
+We'll use the division remainder in 2 chapters from now to check whether a number is even or odd.
+
+MDN logoRemainder (%) on MDN
+
+
+Number methods
+While there are some other methods you could call on numbers, they are not very commonly used. What is commonly used, however, is the Math object which contains methods such as min(), max(), round(), etc.
+
+Recap
+The remainder operator (%) returns the division remainder between 2 numbers.
