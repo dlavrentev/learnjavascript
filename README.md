@@ -480,3 +480,69 @@ Number.parseInt() is the name of the function you're calling.
 10 is the radix which you should specify.
 Make sure to always specify the radix to avoid unpleasant surprises.
 The remainder operator (%) returns the division remainder between 2 numbers.
+
+
+/////////////////////// 4 Variables ///////////////////////////////
+Last updated April 2022
+Now that you've completed the first 3 chapters of this course, we recommend that you read the Features & FAQ page from the top-right menu.
+This will familiarize you with all the features available in this app as well as the reasoning behind some of them. It also explains the importance of sleep when learning something new!
+
+There are 2 ways to define a variable in JavaScript. Let's take a look at the difference between let and const.
+
+let
+The first time you define a variable, you have to prefix it with let = . Let's take an example:
+
+
+let name = "Sam";
+console.log(name);
+This defines a variable called name with a value of "Sam". The next time you'd like to use that variable, you reference it by its name (you only use the let keyword for declaration).
+
+Variables defined with let, can be re-assigned later on:
+
+
+let language = "C++";
+language = "JavaScript";
+Another example with numbers:
+
+let sum = 0;
+sum += 1;
+This is especially useful when you want to create a variable that needs to be incremented/decremented (such as a counter).
+
+MDN logolet on MDN
+
+
+const
+Variables defined with const cannot be re-assigned. This means you can use the = sign only once when defining the variable. Here's an example:
+
+
+const language = "C++"; // Cannot be re-assigned anymore
+console.log(language); // "C++"
+
+language = "Python" // ❌ Type error: this will break your script 
+MDN logoconst on MDN
+
+
+A note about const
+An important note about const is that it does not create a Constant or an Immutable value. This will be thoroughly explained once we learn about arrays & objects. What you need to know, for now, is that you can only use the equal sign once, but you can still change elements inside an array or object.
+
+let vs const
+How do you decide if you're going to use let or const? The general rule is easy. Always go with const, until you realize that you need to be able to re-assign the variable later on, then switch it to let.
+With time it becomes easier. For example, when you define a variable count (that you expect to increment), you will immediately realize that and use let.
+
+The benefit of using const is that once a variable is an array, it will always be an array (but as you will see later on, the elements inside the array might change). This allows you to confidently use array methods on that variable because you know it will always be of type array.
+
+Can I use 'var'?
+When you're browsing the Internet for documentation, or Questions & Answers on StackOverflow, you will see a lot of code snippets using var instead of let & const.
+Even though var still works, its usage is discouraged as it may be confusing in a lot of scenarios. So you can simply replace var with let (or const if the variable is not being reassigned).
+
+Avoid using var when defining variables. Use let or const instead.
+
+A thorough explanation of why you should avoid var is available towards the end of the course. We follow a unique approach in this course where we teach you modern JavaScript before uncovering the legacy and it has worked quite well for most of our students!
+
+Recap
+When you use a variable for the first time in JavaScript, you need to declare it with either let or const.
+Use let for variables that you will need to re-assign later on (as in changing their value)
+Use const for variables that you won't need to re-assign later on.
+Variables declared with const are not constant. We will see why later in this course.
+Variables declared with const cannot be re-assigned so you cannot have the = next to that variable name after declaring it.
+If you see var, it's from the old version of JavaScript. You can convert it to let (sometimes const if the variable is not re-assigned).
