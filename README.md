@@ -469,3 +469,14 @@ While there are some other methods you could call on numbers, they are not very 
 
 Recap
 The remainder operator (%) returns the division remainder between 2 numbers.
+
+
+Chapter Recap
+Convert from a number to string: value.toString()
+NaN stands for Not a Number
+NaN is often a sign of a bug.
+Convert from string to number Number.parseInt(value, 10).
+Number.parseInt() is the name of the function you're calling.
+10 is the radix which you should specify.
+Make sure to always specify the radix to avoid unpleasant surprises.
+The remainder operator (%) returns the division remainder between 2 numbers.
