@@ -546,3 +546,70 @@ Use const for variables that you won't need to re-assign later on.
 Variables declared with const are not constant. We will see why later in this course.
 Variables declared with const cannot be re-assigned so you cannot have the = next to that variable name after declaring it.
 If you see var, it's from the old version of JavaScript. You can convert it to let (sometimes const if the variable is not re-assigned).
+
+///////////// 5. Conditions  //////////////////
+Last updated May 2021
+Conditions in JavaScript have the following blueprint:
+
+
+if (condition) {
+    //do something
+}
+Let's take an example:
+
+
+const grade = 15;
+
+if (grade >= 10) {
+    console.log("Passing grade");
+}
+The code above will output to the console: "Passing grade".
+
+else
+You can also add an else block for all other cases:
+
+
+const grade = 3;
+
+if (grade >= 10) {
+    console.log("Passing grade");
+} else {
+    console.log("Failing grade");
+}
+The code above will output to the console: "Failing grade".
+
+else if
+Several conditions can be checked sequentially using else if. For example:
+
+
+const grade = 10;
+
+if (grade > 10) {
+    console.log("Passing grade");
+} else if (grade === 10) {
+    console.log("Passing on the limit");
+} else {
+    console.log("Failing grade");
+}
+The code above will output to the console: "Passing on the limit".
+
+MDN logoif else on MDN
+
+
+If you've never worked with if conditions, then this course is not suitable for you. In that case, please head over to learnprogramming.online which covers if conditions throughout several chapters.
+
+A note regarding ligatures
+Note that the === that you're seeing is in fact 3 equal signs after each other ===
+The fact that they show up as a single character is a feature that you can enable in your code editor, it's called a ligature and is supported by some fonts.
+Here are some other examples of ligatures that you will see:
+
+>= for >=
+<= for <=
+=== for ===
+!== for !==
+Don't like ligatures? You can turn them off from the top-right menu.
+
+Recap
+Using an if condition, you can run a piece of code when the condition evaluates to true
+The syntax is if (condition) and then curly braces {} wrap the lines of code that correspond to this condition
+The else keyword can be used to perform some other code based on all the other conditions not satisfied with the if.
