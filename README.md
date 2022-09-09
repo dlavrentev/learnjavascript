@@ -613,3 +613,46 @@ Recap
 Using an if condition, you can run a piece of code when the condition evaluates to true
 The syntax is if (condition) and then curly braces {} wrap the lines of code that correspond to this condition
 The else keyword can be used to perform some other code based on all the other conditions not satisfied with the if.
+
+///////////// Advanced if 
+Last updated June 2021
+It is possible sometimes to drop the else. Let's take a look at an example:
+
+
+function canVote(age) {
+    if (age >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+Since this function is performing two different actions based on the result of the if condition and its opposite (else), then we can rewrite it by dropping the else keyword:
+
+
+function canVote(age) {
+    if (age >= 18) {
+        return true;
+    }
+    return false;
+}
+These two functions will have the exact same result. That's because the return keyword will quit the function with the result. So, when the age is bigger than or equals 18, the function will return true and the rest of the code will not execute.
+However, when the age is less than 18, then the code inside the if condition does not execute. Thus, the only line that executes is the last one, which is return false.
+
+We will take advantage of this tip later in this course to learn about a common pattern called early return.
+
+Legacy note
+A quick legacy note. If you encounter == (double equal) in JavaScript, aim to replace it with === triple equal.
+The double equal operator performs some conversions that you wouldn't expect. Always stick with triple equal instead.
+
+Always use triple equal === when comparing 2 values in JavaScript.
+
+If you'd like to know more why == is not recommended, then check this comparison:
+
+"2" == 2;
+Would this return true or false?
+
+It would return true because JavaScript will try to convert both values into the same data type. Please don't consider this a "feature". Instead, you should avoid it and always use triple equal ===.
+
+Recap
+When you have an if/else condition that returns two different results, it is possible to drop the else keyword.
+Always use triple equals (===) when comparing 2 values in JavaScript.
