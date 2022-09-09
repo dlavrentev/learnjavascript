@@ -682,3 +682,25 @@ function isPassing(grade) {
 without using if/else which will always return a boolean!
 
 This only works whenever you're returning a boolean from a function.
+
+/////////// Even & Odd 
+Last updated May 2021
+Back in the Numbers chapter, we explained the Remainder operator (%). When you get the division remainder of a number by two, you will either get 0 or 1. This will help you know whether the original number is even (divisible by two without a remainder) or odd.
+
+Let's take a look at some numbers:
+
+
+// even numbers
+4 % 2 // 0
+6 % 2 // 0
+8 % 2 // 0
+10 % 2 // 0
+
+// odd numbers
+3 % 2 // 1
+5 % 2 // 1
+7 % 2 // 1
+9 % 2 // 1
+Notice how the division remainder by two is always 0 when the number is even. Whereas it's 1 when the number is odd.
+
+In the next challenge, we'll use an if condition to show whether the number entered by the user is even or odd!
