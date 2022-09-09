@@ -704,3 +704,14 @@ Let's take a look at some numbers:
 Notice how the division remainder by two is always 0 when the number is even. Whereas it's 1 when the number is odd.
 
 In the next challenge, we'll use an if condition to show whether the number entered by the user is even or odd!
+
+Chapter recap 
+Last updated May 2021
+Nice work! In the next chapter, we'll start working with arrays. See you there!
+
+Chapter Recap
+Using an if condition, you can run a piece of code when the condition evaluates to true
+The syntax is if (condition) and then curly braces {} wrap the lines of code that correspond to this condition
+The else keyword can be used to perform some other code based on all the other conditions not satisfied with the if.
+When you have an if/else condition that returns two different results, it is possible to drop the else keyword.
+Always use triple equals (===) when comparing 2 values in JavaScript.
